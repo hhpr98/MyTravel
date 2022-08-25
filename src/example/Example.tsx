@@ -21,7 +21,7 @@ const people = [
   }
 ];
 
-export default function Example () {
+export default function Example (): JSX.Element {
   return (
     <ul className="divide-y divide-gray-200">
       {people.map((person) => (
@@ -35,4 +35,4 @@ export default function Example () {
       ))}
     </ul>
   );
-};
+}

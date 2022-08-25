@@ -1,7 +1,9 @@
-import './App.css';
+import React from 'react';
 import Example from './example/Example';
 
-function App() {
+import './App.css';
+
+function App () {
   return (
     <Example />
   );

@@ -25,7 +25,12 @@
             "always"
         ],
         "@typescript-eslint/semi": "off",
-        "@typescript-eslint/strict-boolean-expressions": "off"
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "space-before-function-paren": "off",
+        "@typescript-eslint/space-before-function-paren": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-unsafe-assignment": "warn",
+        "@typescript-eslint/no-unsafe-call": "warn"
     },
     "parser": "@typescript-eslint/parser"
 }

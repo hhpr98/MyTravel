@@ -1,3 +1,0 @@
-interface TestTest {
-  FieldA: number
-}

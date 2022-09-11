@@ -10,12 +10,11 @@ export default function MyMapComponent({
   const ref = useRef();
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     new window.google.maps.Map(ref.current, {
       center,
       zoom,
     });
-  }, []);
+  }, [center, zoom]);
 
   return (
     <div>

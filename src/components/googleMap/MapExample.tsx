@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Wrapper, Status } from "@googlemaps/react-wrapper";
 import MyMapComponent from './MyMapComponent';
 
 export default function MapExample(): JSX.Element {
-  const [center, setCenter] = React.useState<google.maps.LatLngLiteral>({
+  const [center, setCenter] = useState<google.maps.LatLngLiteral>({
     lat: 59.955413,
     lng: 30.337844,
   });
@@ -23,13 +23,13 @@ export default function MapExample(): JSX.Element {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     setCenter({ lat: 59.955413, lng: 30.337844 });
   }, []);
 
   return (
     <div style={{ height: "500px" }}>
-      <Wrapper apiKey={"AIzaSyBf4W9u8qQN-j1625GlKnokmNOCDHXXd5Q"} render={render}>
+      <Wrapper apiKey={process.env.REACT_APP_GOOGLE_API_KEY} render={render}>
         <MyMapComponent
           center={center}
           zoom={11}

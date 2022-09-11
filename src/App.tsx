@@ -1,5 +1,5 @@
 import React from 'react';
-import MapExample from './example/MapExample';
+import MapExample from './components/googleMap/MapExample';
 
 import './App.css';
 

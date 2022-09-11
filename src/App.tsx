@@ -1,11 +1,11 @@
 import React from 'react';
-import Example from './example/Example';
+import MapExample from './components/googleMap/MapExample';
 
 import './App.css';
 
-function App (): JSX.Element {
+function App(): JSX.Element {
   return (
-    <Example />
+    <MapExample />
   );
 }
 

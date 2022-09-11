@@ -28,7 +28,7 @@ export default function MapExample(): JSX.Element {
   }, []);
 
   return (
-    <div style={{ height: "500px" }}>
+    <div className='h-screen'>
       <Wrapper apiKey={process.env.REACT_APP_GOOGLE_API_KEY} render={render}>
         <MyMapComponent
           center={center}

@@ -18,7 +18,7 @@ export default function MyMapComponent({
 
   return (
     <div>
-      <div>Google Map</div>
+      <div className="ml-1 text-base">Google Map</div>
       <div ref={ref} id="map" />
     </div>
   );

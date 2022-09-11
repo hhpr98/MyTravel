@@ -3,8 +3,13 @@ import { Wrapper, Status } from "@googlemaps/react-wrapper";
 import MyMapComponent from './MyMapComponent';
 
 export default function MapExample(): JSX.Element {
-  const [center, setCenter] = React.useState<google.maps.LatLngLiteral>({ lat: 59.955413, lng: 30.337844 });
+  const [center, setCenter] = React.useState<google.maps.LatLngLiteral>({
+    lat: 59.955413,
+    lng: 30.337844,
+  });
+
   const render = (status: Status): JSX.Element => {
+    console.log(status);
     switch (status) {
       case Status.LOADING:
         return <div>loading</div>;
@@ -18,9 +23,13 @@ export default function MapExample(): JSX.Element {
     }
   };
 
+  React.useEffect(() => {
+    setCenter({ lat: 59.955413, lng: 30.337844 });
+  }, []);
+
   return (
     <div style={{ height: "500px" }}>
-      <Wrapper apiKey={"AIzaSyDWTx7bREpM5B6JKdbzOvMW-RRlhkukmVE"} render={render}>
+      <Wrapper apiKey={"AIzaSyBf4W9u8qQN-j1625GlKnokmNOCDHXXd5Q"} render={render}>
         <MyMapComponent
           center={center}
           zoom={11}

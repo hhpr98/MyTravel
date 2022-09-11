@@ -17,5 +17,10 @@ export default function MyMapComponent({
     });
   }, []);
 
-  return <div ref={ref} id="map" />;
+  return (
+    <div>
+      <div>Map</div>
+      <div ref={ref} id="map" />
+    </div>
+  );
 }

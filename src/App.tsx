@@ -1,9 +1,11 @@
 import React from 'react';
-import MapExample from './components/googleMap/MapExample';
+import MapView from './components/hereMap/mapView';
 
 function App(): JSX.Element {
   return (
-    <MapExample />
+    <div>
+      <MapView />
+    </div>
   );
 }
 

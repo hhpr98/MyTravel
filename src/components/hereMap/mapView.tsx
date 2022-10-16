@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 
 import H from "@here/maps-api-for-javascript";
 
@@ -26,6 +26,7 @@ function MapView(): JSX.Element {
     // This will act as a cleanup to run once this hook runs again.
     // This includes when the component un-mounts
     return () => {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       mapView.dispose();
     };
   }, []);

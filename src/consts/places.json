@@ -166,7 +166,9 @@
     },
     {
       "id": 42,
-      "name": "Ninh Thuận"
+      "name": "Ninh Thuận",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Po_Klong_Garai.jpg",
+      "checkedIn": true
     },
     {
       "id": 43,

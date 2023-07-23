@@ -1,10 +1,8 @@
 {
   "name": "my-travel",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "dependencies": {
-    "@googlemaps/react-wrapper": "^1.1.35",
-    "@here/maps-api-for-javascript": "^1.34.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -43,7 +41,6 @@
     ]
   },
   "devDependencies": {
-    "@types/google.maps": "^3.50.0",
     "@typescript-eslint/eslint-plugin": "^5.35.1",
     "autoprefixer": "^10.4.8",
     "eslint": "^8.22.0",

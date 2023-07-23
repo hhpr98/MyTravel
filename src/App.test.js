@@ -5,7 +5,7 @@ import App from './App';
 
 // https://github.com/facebook/jest/issues/9538
 // eslint-disable-next-line no-undef
-test('renders learn react link', () => {
+test('renders app test', () => {
   // eslint-disable-next-line react/jsx-filename-extension
   render(<App />);
   const text = screen.getByText(/(Nơi tôi đã đi)/i);

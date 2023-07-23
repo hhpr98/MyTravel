@@ -1,10 +1,9 @@
 import React from 'react';
+import MainPage from './components/MainPage/MainPage';
 
 function App(): JSX.Element {
   return (
-    <div>
-      MapExample
-    </div>
+    <MainPage />
   );
 }
 

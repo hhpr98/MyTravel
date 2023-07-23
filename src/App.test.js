@@ -8,6 +8,6 @@ import App from './App';
 test('renders learn react link', () => {
   // eslint-disable-next-line react/jsx-filename-extension
   render(<App />);
-  const text = screen.getByText(/(MapExample)/i);
+  const text = screen.getByText(/(Nơi tôi đã đi)/i);
   expect(text).toBeInTheDocument();
 });

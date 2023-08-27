@@ -1,6 +1,6 @@
 import React from "react";
 
-import placesData from "../../consts/places.json";
+import placesData from "../../resources/my-travel/consts/places.json";
 import Places from "../Places/Places";
 
 const places: Places = placesData as Places;

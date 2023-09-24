@@ -6,11 +6,16 @@ const defaultURL = "https://cdn.tgdd.vn/Files/2022/10/01/1473455/kham-pha-lang-c
 const Places = (places: PlacesProps): JSX.Element => {
   const imageURL = places.placeImage || defaultURL;
 
+  const handlePlaceClick = (): void => {
+    // eslint-disable-next-line no-console
+    console.log(places.placeId);
+  };
+
   return (
     <li>
-      <div className="flex items-center gap-x-6">
+      <div className="flex items-center gap-x-6 hover:cursor-pointer" onClick={handlePlaceClick}>
         <img
-          className="h-16 w-16 rounded-full"
+          className="h-16 w-16 rounded-full hover:scale-200 transform-gpu"
           src={imageURL}
           alt="place image"
         ></img>

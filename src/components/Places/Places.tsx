@@ -15,7 +15,7 @@ const Places = (places: PlacesProps): JSX.Element => {
     <li>
       <div className="flex items-center gap-x-6 hover:cursor-pointer" onClick={handlePlaceClick}>
         <img
-          className="h-16 w-16 rounded-full"
+          className="h-16 w-16 rounded-full hover:scale-200 transform-gpu"
           src={imageURL}
           alt="place image"
         ></img>

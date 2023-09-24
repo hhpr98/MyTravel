@@ -14,16 +14,18 @@ const MainPage = (): JSX.Element => {
         role="list"
         className="grid gap-x-8 gap-y-12 sm:grid-cols-4 sm:gap-y-16 xl:col-span-2"
       >
-        {places.vietnam.map(
-          (place: Place): JSX.Element =>
-            <Places
-              key={place.id}
-              placeId={place.id}
-              placeName={place.name}
-              placeImage={place.image}
-              placeCheckedIn={place.checkedIn}
-            ></Places>
-        )}
+        {places.vietnam.
+          sort((first, second) => Number(second.checkedIn) - Number(first.checkedIn))
+          .map(
+            (place: Place): JSX.Element =>
+              <Places
+                key={place.id}
+                placeId={place.id}
+                placeName={place.name}
+                placeImage={place.image}
+                placeCheckedIn={place.checkedIn}
+              ></Places>
+          )}
       </ul>
       <div>Thế giới</div>
     </div>

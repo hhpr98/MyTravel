@@ -7,6 +7,7 @@ const Places = (places: PlacesProps): JSX.Element => {
   const imageURL = places.placeImage || defaultURL;
 
   const handlePlaceClick = (): void => {
+    // eslint-disable-next-line no-console
     console.log(places.placeId);
   };
 

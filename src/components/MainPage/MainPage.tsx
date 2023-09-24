@@ -8,8 +8,12 @@ const places: Places = placesData as Places;
 const MainPage = (): JSX.Element => {
   return (
     <div className="overflow-hidden bg-white py-6 sm:py-12 px-24 sm:px-32">
-      <div>Những nơi tôi đã đi</div>
-      <div>Việt Nam</div>
+      <h1 className="text-6xl font-normal leading-normal mt-0 mb-2 text-cyan-800">
+        Hành trình của tôi
+      </h1>
+      <h4 className="text-3xl font-normal leading-normal mt-0 mb-5 text-pink-800">
+        Việt Nam
+      </h4>
       <ul
         role="list"
         className="grid gap-x-8 gap-y-12 sm:grid-cols-4 sm:gap-y-16 xl:col-span-2"
@@ -27,7 +31,9 @@ const MainPage = (): JSX.Element => {
               ></Places>
           )}
       </ul>
-      <div>Thế giới</div>
+      <h4 className="text-3xl font-normal leading-normal mt-5 mb-5 text-pink-800">
+        Thế giới
+      </h4>
     </div>
   );
 };

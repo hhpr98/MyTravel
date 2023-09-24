@@ -11,6 +11,7 @@ type Place = {
 }
 
 type PlacesProps = {
+  placeId: number
   placeName: string
   placeImage: string
   placeCheckedIn: boolean

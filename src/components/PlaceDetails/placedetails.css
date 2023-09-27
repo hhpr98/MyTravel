@@ -1,3 +1,15 @@
+/* Style for images list */
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.images img {
+  height: calc(33vh - 20px);
+  padding: 10px;
+}
+
 /* Style the Image Used to Trigger the Modal */
 img {
   border-radius: 5px;

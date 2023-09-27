@@ -26,9 +26,9 @@ const PlaceDetails = (): JSX.Element => {
   return (
     <div>
       <div className="images">
-        <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" width="300" height="200" onClick={handleImageClick} />
-        <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" width="300" height="200" onClick={handleImageClick} />
-        <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" width="300" height="200" onClick={handleImageClick} />
+        <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="image" onClick={handleImageClick} />
+        <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="image" onClick={handleImageClick} />
+        <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="image" onClick={handleImageClick} />
       </div>
       <div id="image-viewer">
         <span className="close" onClick={handleCloseImage}>&times;</span>

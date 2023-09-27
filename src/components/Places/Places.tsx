@@ -1,14 +1,18 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
+
 // eslint-disable-next-line max-len
 const defaultURL = "https://cdn.tgdd.vn/Files/2022/10/01/1473455/kham-pha-lang-chay-gio-son-hai-ninh-thuan-dubai-thu-nho-cua-viet-nam-202210020925136207.jpg";
 
 const Places = (places: PlacesProps): JSX.Element => {
   const imageURL = places.placeImage || defaultURL;
 
+  const navigate = useNavigate();
+
   const handlePlaceClick = (): void => {
-    // eslint-disable-next-line no-console
-    console.log(places.placeId);
+    navigate(`/places/${places.placeId}`);
   };
 
   return (

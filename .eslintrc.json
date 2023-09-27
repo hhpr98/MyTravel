@@ -90,6 +90,10 @@
                     "error"
                 ]
             }
+        ],
+        "eol-last": [
+            "error",
+            "always"
         ]
     },
     "settings": {

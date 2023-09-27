@@ -1,9 +1,9 @@
 import React from "react";
 
-import "./placedetails.css";
+import "./placegallery.css";
 
 // Ref: https://codepen.io/abmin/pen/jZKrze
-const PlaceDetails = (): JSX.Element => {
+const PlaceGallery = (): JSX.Element => {
   const handleImageClick = (): void => {
     const targetImage = document.querySelector("#full-image") as HTMLImageElement;
     const clickedImage = event.target as HTMLImageElement;
@@ -38,4 +38,4 @@ const PlaceDetails = (): JSX.Element => {
   );
 };
 
-export default PlaceDetails;
+export default PlaceGallery;

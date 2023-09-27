@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import App from './App';
 import './index.css';
-import PlaceDetails from './components/PlaceDetails/PlaceDetails';
+import PlaceGallery from './components/PlaceGallery/PlaceGallery';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as Element);
 root.render(
@@ -14,7 +14,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/places/:id" element={<PlaceDetails />} />
+        <Route path="/gallery/:id" element={<PlaceGallery />} />
         <Route
           path="*"
           element={<Navigate to="/" replace />}

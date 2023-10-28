@@ -1,8 +1,5 @@
 import React from "react";
 
-import "./placedetails.css";
-
-// Refer at https://codepen.io/krdesign/pen/QpQjmM
 const PlaceDetails = (): JSX.Element => {
   return (
     <div className="container mx-auto p-4">

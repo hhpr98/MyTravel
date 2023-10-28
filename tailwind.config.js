@@ -17,7 +17,7 @@ module.exports = {
         75: '75%',
       },
       colors: {
-        purple: '#800080'
+        purple: '#800080',
       }
     }
   },

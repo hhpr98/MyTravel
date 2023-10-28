@@ -28,9 +28,9 @@ const PlaceGallery = (): JSX.Element => {
   return (
     <div>
       <div className="images">
-        <img src={defaultImageUrl} alt="image" onClick={handleImageClick} />
-        <img src={defaultImageUrl} alt="image" onClick={handleImageClick} />
-        <img src={defaultImageUrl} alt="image" onClick={handleImageClick} />
+        <img src={defaultImageUrl} alt="image" onClick={handleImageClick} loading="lazy" />
+        <img src={defaultImageUrl} alt="image" onClick={handleImageClick} loading="lazy" />
+        <img src={defaultImageUrl} alt="image" onClick={handleImageClick} loading="lazy" />
       </div>
       <div id="image-viewer">
         <span className="close" onClick={handleCloseImage}>&times;</span>

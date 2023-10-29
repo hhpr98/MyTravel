@@ -1,7 +1,8 @@
 {
   "name": "my-travel",
-  "version": "0.3.9",
+  "version": "0.3.10",
   "private": true,
+  "homepage": "https://hhpr98.github.io/my-travel",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",

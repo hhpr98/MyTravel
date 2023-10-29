@@ -1,27 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 
-import { Routes, Route, Navigate } from "react-router";
-import { BrowserRouter as Router } from "react-router-dom";
+import ReactDOM from 'react-dom/client';
 
 import App from './App';
 import './index.css';
-import PlaceGallery from './components/PlaceGallery/PlaceGallery';
-import PlaceDetails from './components/PlaceDetails/PlaceDetails';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as Element);
 root.render(
   <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/places/:id" element={<PlaceDetails />} />
-        <Route path="/gallery" element={<PlaceGallery />} />
-        <Route
-          path="*"
-          element={<Navigate to="/" replace />}
-        />
-      </Routes>
-    </Router>
+    <App />
   </React.StrictMode>
 );

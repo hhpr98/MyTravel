@@ -1,6 +1,7 @@
 import React from "react";
 
 import { useParams } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 import { Plus, Search } from "../../assets/images/index.js";
 import imageData from "../../resources/my-travel/consts/images.json";
@@ -13,6 +14,8 @@ const places: Places = placesData as Places;
 const PlaceDetails = (): JSX.Element => {
   // Get place id to get data
   const { id } = useParams();
+  const navigate = useNavigate();
+
 
   // Get name of place
   const findPlace = places.vietnam.find((place) => place.id.toString() === id)
@@ -87,7 +90,9 @@ const PlaceDetails = (): JSX.Element => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4 text-purple">Về trang chủ</h1>
+      <button onClick={() => navigate("/")}>
+        <h1 className="text-2xl font-bold mb-4 text-purple">Về trang chủ</h1>
+      </button>
 
       <div className="bg-gray-100 flex items-start justify-center lg:h-screen py-16">
         <div className="w-11/12 sm:w-11/12 md:w-8/12 lg:w-6/12 bg-white p-6 rounded-lg shadow-sm">

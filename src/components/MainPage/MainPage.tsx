@@ -1,14 +1,14 @@
 import React from "react";
 
-import placesData from "../../resources/my-travel/consts/places.json";
 import Places from "../Places/Places";
+import placesData from "../../resources/my-travel/consts/places.json";
 
 const places: Places = placesData as Places;
 
 const MainPage = (): JSX.Element => {
   return (
     <div className="overflow-hidden bg-white py-6 sm:py-12 px-24 sm:px-32">
-      <h1 className="text-6xl font-normal leading-normal mt-0 mb-2 text-cyan-800">
+      <h1 className="text-6xl font-semibold leading-normal mt-0 mb-2 text-purple">
         Hành trình của tôi
       </h1>
       <h4 className="text-3xl font-normal leading-normal mt-0 mb-5 text-pink-800">

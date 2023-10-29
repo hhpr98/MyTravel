@@ -16,3 +16,9 @@ type PlacesProps = {
   placeImage: string
   placeCheckedIn: boolean
 }
+
+type PlacesGalleryLocation = {
+  placeId: string;
+  placeName: string;
+  albumData: ImageAlbums;
+}

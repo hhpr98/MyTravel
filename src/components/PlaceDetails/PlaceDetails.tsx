@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
@@ -16,16 +16,24 @@ const PlaceDetails = (): JSX.Element => {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  const getPlaceName = useMemo(() => {
+    // Get name of place
+    const findPlace = places.vietnam.find((place) => place.id.toString() === id)
+      || places.world.find((place) => place.id.toString() === id);
+    if (!findPlace) {
+      // TODO: handle this exception
+    }
+    const placeName = findPlace.name || "<chưa xác định>";
+    return placeName;
+  }, [id]);
 
-  // Get name of place
-  const findPlace = places.vietnam.find((place) => place.id.toString() === id)
-    || places.world.find((place) => place.id.toString() === id);
-  if (!findPlace) {
-    // TODO: handle this exception
-  }
-  const placeName = findPlace.name || "<chưa xác định>";
+  const redirectToHomePage = (): void => navigate("/");
 
-  const renderPlaceDate = (): JSX.Element[] => {
+  const redirectToGallery = (albumData: ImageAlbums): void => {
+    navigate("/gallery", { state: { name: getPlaceName, data: albumData } });
+  };
+
+  const renderPlaceDetails = (): JSX.Element[] => {
     const placeDataRet: JSX.Element[] = [];
     // Check if this place does not having any pictures
     if (!placeGallery[id])
@@ -57,6 +65,7 @@ const PlaceDetails = (): JSX.Element => {
                 bg-white/20 p-6 rounded-md shadow-sm cursor-pointer border-2 border-gray-50
                 hover:border-purple hover:border-2 transition-colors duration-300
               `}
+              onClick={() => redirectToGallery(album)}
             >
               <h2 className="text-xl font-semibold mb-4 text-purple">{album.name}</h2>
               <p
@@ -90,7 +99,7 @@ const PlaceDetails = (): JSX.Element => {
 
   return (
     <div className="container mx-auto p-4">
-      <button onClick={() => navigate("/")}>
+      <button onClick={redirectToHomePage}>
         <h1 className="text-2xl font-bold mb-4 text-purple">Về trang chủ</h1>
       </button>
 
@@ -98,7 +107,7 @@ const PlaceDetails = (): JSX.Element => {
         <div className="w-11/12 sm:w-11/12 md:w-8/12 lg:w-6/12 bg-white p-6 rounded-lg shadow-sm">
           <div className="w-full flex justify-between items-center p-3">
             <h2 className="text-xl font-semibold text-purple">
-              {`Tôi đã đến ${placeName} và đi những đâu?`}
+              {`Tôi đã đến ${getPlaceName} và đi những đâu?`}
             </h2>
             <button
               id="openModalBtn"
@@ -140,7 +149,7 @@ const PlaceDetails = (): JSX.Element => {
               </div>
             </div>
           </div>
-          {renderPlaceDate()}
+          {renderPlaceDetails()}
         </div>
       </div>
 

@@ -16,7 +16,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/places/:id" element={<PlaceDetails />} />
-        <Route path="/gallery/:id" element={<PlaceGallery />} />
+        <Route path="/gallery" element={<PlaceGallery />} />
         <Route
           path="*"
           element={<Navigate to="/" replace />}

@@ -30,7 +30,7 @@ const PlaceDetails = (): JSX.Element => {
   const redirectToHomePage = (): void => navigate("/");
 
   const redirectToGallery = (albumData: ImageAlbums): void => {
-    navigate("/gallery", { state: { name: getPlaceName, data: albumData } });
+    navigate("/gallery", { state: { placeId: id, placeName: getPlaceName, albumData } });
   };
 
   const renderPlaceDetails = (): JSX.Element[] => {

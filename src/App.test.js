@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { render, screen } from '@testing-library/react';
-import { BrowserRouter as Router } from "react-router-dom";
 
 import App from './App';
 
@@ -9,7 +8,7 @@ import App from './App';
 // eslint-disable-next-line no-undef
 test('renders app test', () => {
   // eslint-disable-next-line react/jsx-filename-extension
-  render(<Router><App /></Router>);
+  render(<App />);
   const text = screen.getByText(/(Hành trình của tôi)/i);
   expect(text).toBeInTheDocument();
 });

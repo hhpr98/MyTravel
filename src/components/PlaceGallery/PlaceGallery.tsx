@@ -1,9 +1,17 @@
 import React from "react";
 
+import { useNavigate, useLocation } from "react-router-dom";
+
 import "./placegallery.css";
+import { getAllImages } from "../../helper/getLink";
 
 // Ref: https://codepen.io/abmin/pen/jZKrze
 const PlaceGallery = (): JSX.Element => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const { placeId, placeName, albumData } = location.state as PlacesGalleryLocation;
+
   const handleImageClick = (): void => {
     const targetImage = document.querySelector("#full-image") as HTMLImageElement;
     const clickedImage = event.target as HTMLImageElement;
@@ -23,14 +31,23 @@ const PlaceGallery = (): JSX.Element => {
     }
   };
 
-  const defaultImageUrl = "https://www.w3schools.com/howto/img_fjords.jpg";
+  const redirectToAlbum = (): void => navigate(`/places/${placeId}`);
 
   return (
-    <div>
+    <div className="container mx-auto p-4">
+      <button onClick={redirectToAlbum}>
+        <h1 className="text-2xl font-bold mb-4 text-purple">Về album {placeName}</h1>
+      </button>
       <div className="images">
-        <img src={defaultImageUrl} alt="image" onClick={handleImageClick} loading="lazy" />
-        <img src={defaultImageUrl} alt="image" onClick={handleImageClick} loading="lazy" />
-        <img src={defaultImageUrl} alt="image" onClick={handleImageClick} loading="lazy" />
+        {
+          getAllImages(albumData).map((url) => <img
+            key={url}
+            src={url}
+            alt={`img-${placeName}`}
+            onClick={handleImageClick}
+            loading="lazy"
+          />)
+        }
       </div>
       <div id="image-viewer">
         <span className="close" onClick={handleCloseImage}>&times;</span>

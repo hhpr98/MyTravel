@@ -1,7 +1,9 @@
 import React from 'react';
 
 import { Routes, Route, Navigate } from "react-router";
-import { BrowserRouter as Router } from "react-router-dom";
+// https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages
+// Switch to the HashRouter since GitHub pages doesn't support the tech used by the BrowserRouter.
+import { HashRouter as Router } from "react-router-dom";
 
 import MainPage from './components/MainPage/MainPage';
 import PlaceDetails from './components/PlaceDetails/PlaceDetails';

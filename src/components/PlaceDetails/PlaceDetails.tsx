@@ -24,6 +24,9 @@ const PlaceDetails = (): JSX.Element => {
 
   const renderPlaceDate = (): JSX.Element[] => {
     const placeDataRet: JSX.Element[] = [];
+    // Check if this place does not having any pictures
+    if (!placeGallery[id])
+      return placeDataRet;
 
     placeGallery[id].forEach((placeDetail: PlaceDetail) => {
       // Push for each journey
@@ -48,9 +51,9 @@ const PlaceDetails = (): JSX.Element => {
             imageAlbums.map((album: ImageAlbums, index: number) => <div
               key={`place-${id}-${placeDetail.date_id}-${index}`}
               className={`
-              bg-white/20 p-6 rounded-md shadow-sm cursor-pointer border-2 border-gray-50
-              hover:border-purple hover:border-2 transition-colors duration-300
-            `}
+                bg-white/20 p-6 rounded-md shadow-sm cursor-pointer border-2 border-gray-50
+                hover:border-purple hover:border-2 transition-colors duration-300
+              `}
             >
               <h2 className="text-xl font-semibold mb-4 text-purple">{album.name}</h2>
               <p

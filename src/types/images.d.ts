@@ -23,4 +23,5 @@ type ImageProperies = {
   name: string;
   id: string;
   description: string;
+  url?: string;
 }

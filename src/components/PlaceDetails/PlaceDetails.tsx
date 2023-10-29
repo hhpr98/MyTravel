@@ -5,6 +5,7 @@ import { useParams } from "react-router";
 import { Plus, Search } from "../../assets/images/index.js";
 import imageData from "../../resources/my-travel/consts/images.json";
 import placesData from "../../resources/my-travel/consts/places.json";
+import { getAllImages } from "../../helper/getLink";
 
 const placeGallery: PlaceGallery = imageData as PlaceGallery;
 const places: Places = placesData as Places;
@@ -39,7 +40,10 @@ const PlaceDetails = (): JSX.Element => {
       // Push for the detail of this journey (Những nơi mà hành trình đó bạn ghé qua)
       const imageAlbums: ImageAlbums[] = placeDetail.places;
       placeDataRet.push(
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
+        <div
+          key={`grid-for-${placeDetail.date_id}`}
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4"
+        >
           {
             imageAlbums.map((album: ImageAlbums, index: number) => <div
               key={`place-${id}-${placeDetail.date_id}-${index}`}
@@ -61,8 +65,11 @@ const PlaceDetails = (): JSX.Element => {
                 `}
                 >
                   {
-                    // eslint-disable-next-line max-len
-                    [48, 49, 50, 51, 52].map((n) => <img key={`img-${n}`} src={`https://placekitten.com/${n}/${n}`} alt="" className="w-6 h-6 rounded-full bg-black" loading="lazy" />)
+                    getAllImages(album).map((url: string) => <img
+                      key={`img-${url}`} src={url} alt=""
+                      className="w-6 h-6 rounded-full bg-black"
+                      loading="lazy"
+                    />)
                   }
                 </dd>
               </div>

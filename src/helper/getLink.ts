@@ -1,6 +1,6 @@
 export const getLink = (img: ImageProperies): string => {
   if (img?.type === "Google Drive")
-    return `https://drive.google.com/uc?export=download&id=${img.id}`;
+    return `https://drive.google.com/uc?export=view&id=${img.id}`;
   if (img?.url)
     return img.url;
   return "";

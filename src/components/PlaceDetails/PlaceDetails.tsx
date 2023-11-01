@@ -80,7 +80,7 @@ const PlaceDetails = (): JSX.Element => {
                 `}
                 >
                   {
-                    getAllImages(album).map((url: string) => <img
+                    getAllImages(album).slice(0, 5).map((url: string) => <img
                       key={`img-${url}`} src={url} alt=""
                       className="w-6 h-6 rounded-full bg-black"
                       loading="lazy"

@@ -45,7 +45,7 @@ const PlaceDetails = (): JSX.Element => {
       placeDataRet.push(
         <div
           key={`title-for-${placeDetail.date_id}`}
-          className="text-base font-semibold mb-4 text-purple"
+          className="text-base font-semibold mt-8 mb-4 text-purple"
         >
           <i>{placeDetail.description}</i>
         </div>
